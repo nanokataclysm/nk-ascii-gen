@@ -1,0 +1,198 @@
+.shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 20px 48px;
+}
+
+.mast {
+  margin-bottom: 28px;
+}
+
+.mast-kicker {
+  margin: 0 0 8px;
+  color: var(--dim);
+  font-size: 13px;
+}
+
+.mast h1 {
+  margin: 0 0 10px;
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 650;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+}
+
+.mast-lead {
+  margin: 0;
+  max-width: 42rem;
+  color: var(--mute);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.panel,
+.stage {
+  background: var(--panel);
+  border: 1px solid var(--line);
+}
+
+.panel {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+.field span,
+.field legend {
+  color: var(--dim);
+  font-size: 12px;
+  padding: 0;
+}
+
+.field input,
+.field select {
+  font: inherit;
+  font-family: var(--mono);
+  color: var(--ink);
+  background: var(--well);
+  border: 1px solid var(--line);
+  padding: 9px 10px;
+}
+
+.field input:focus,
+.field select:focus,
+.actions button:focus-visible,
+.segment button:focus-visible,
+.chip:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+.segment {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.segment button,
+.actions button,
+.chip {
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid var(--line);
+  background: var(--well);
+  color: var(--ink);
+}
+
+.segment button {
+  padding: 8px 10px;
+}
+
+.segment button.on,
+.chip.on {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+.swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  padding: 6px 8px 6px 22px;
+  position: relative;
+}
+
+.chip::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  transform: translateY(-50%);
+  background: var(--chip);
+}
+
+.stage {
+  padding: 14px;
+  min-width: 0;
+}
+
+.crt {
+  background: #070907;
+  border: 1px solid #1c241c;
+  box-shadow: inset 0 0 40px rgba(20, 40, 16, 0.35);
+  overflow: auto;
+  min-height: 220px;
+  padding: 16px;
+}
+
+.crt pre {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.15;
+  white-space: pre;
+  color: var(--phosphor);
+}
+
+.crt .row {
+  display: block;
+}
+
+.hint {
+  margin: 0;
+  color: var(--dim);
+}
+
+.font-meta {
+  margin: 10px 0 0;
+  color: var(--dim);
+  font-size: 12px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.actions button {
+  padding: 9px 12px;
+}
+
+.actions button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

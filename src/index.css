@@ -1,0 +1,37 @@
+:root {
+  --ink: #e8f0d8;
+  --mute: #9aaa8a;
+  --dim: #6d7a62;
+  --bg: #0c100c;
+  --panel: #121612;
+  --well: #0a0e0a;
+  --line: #2a3324;
+  --amber: #ffb000;
+  --phosphor: #c8e07a;
+  --mono: ui-monospace, "Cascadia Code", "JetBrains Mono", "Fira Code", "Menlo",
+    Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font: 15px/1.45 var(--mono);
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 500px at 10% -10%, #182018, transparent 55%),
+    var(--bg);
+}
+
+button,
+input,
+select {
+  border-radius: 0;
+}
